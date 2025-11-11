@@ -33,7 +33,7 @@ jobs:
         run: npm ci
 
       - name: Run tests
-        run: ng test --watch=false --browsers=ChromeHeadless
+        run: npx ng test --watch=false --browsers=ChromeHeadless
 
       - name: Run SonarQube scan
         env:

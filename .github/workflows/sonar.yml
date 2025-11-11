@@ -40,8 +40,9 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           npx sonar-scanner \
-            -Dsonar.projectKey=frontend-app \
-            -Dsonar.sources=src \
-            -Dsonar.host.url=https://sonarcloud.io/project/overview?id=VoltCast-a-ASE-project_Frontend:9000 \
+            -Dsonar.projectKey=Frontend \
+            -Dsonar.sources=voltcast-frontend/src \
+            -Dsonar.tests=coltcast-frontend/src \
+            -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.login=$SONAR_TOKEN \
             -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info

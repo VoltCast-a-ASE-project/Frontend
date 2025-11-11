@@ -13,6 +13,10 @@ jobs:
     name: SonarQube Analysis
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: voltcast-frontend
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4

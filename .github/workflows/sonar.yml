@@ -40,8 +40,8 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           npx sonar-scanner \
-            -Dsonar.projectKey=VoltCast-a-ASE-project_Frontend \
-            -Dsonar.organization=VoltCast-a-ASE-project \
+            -Dsonar.projectKey=voltcast-a-ase-project_Frontend \
+            -Dsonar.organization=voltcast-a-ase-project \
             -Dsonar.sources=. \
             -Dsonar.tests=. \
             -Dsonar.test.inclusions=**/*.spec.ts,**/*.test.ts \

@@ -33,16 +33,7 @@ jobs:
       - name: Run tests
         run: npx ng test --watch=false --browsers=ChromeHeadless
 
-      - name: Run SonarQube scan
+      - name: SonarCloud Analysis
+        uses: SonarSource/sonarqube-scan-action@v6
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: |
-          npx sonar-scanner \
-            -Dsonar.projectKey=voltcast-a-ase-project_frontend \
-            -Dsonar.organization=voltcast-a-ase-project \
-            -Dsonar.sources=. \
-            -Dsonar.tests=. \
-            -Dsonar.test.inclusions=**/*.spec.ts,**/*.test.ts \
-            -Dsonar.host.url=https://sonarcloud.io \
-            -Dsonar.login=$SONAR_TOKEN \
-            -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info

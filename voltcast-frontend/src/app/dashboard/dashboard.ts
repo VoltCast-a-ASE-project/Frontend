@@ -7,6 +7,7 @@ import {ApiService} from '../services/api';
   imports: [],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
+  standalone: true,
 })
 export class Dashboard implements OnInit{
   status:string = "no request yet";

@@ -10,8 +10,11 @@ import { CanActivate } from '@angular/router';
 /**
  * Service das beim Ändern der URL bzw beim Routing auf eine andere Seite prüft, ob ein valider JWT Token vorhanden ist.
  */
+export class AuthService{}
+/*
 export class AuthService implements CanActivate {
   constructor(private apiService: ApiService) {}
+
 
   canActivate(): Promise<boolean> {
     return this.apiService.sendRequest<any>(HttpMethod.GET, "/auth").then(
@@ -27,3 +30,4 @@ export class AuthService implements CanActivate {
       });
   }
 }
+  */

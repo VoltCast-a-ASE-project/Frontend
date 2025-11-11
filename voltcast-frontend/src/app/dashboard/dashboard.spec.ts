@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ApiService } from '../services/api';
+import { provideHttpClient } from '@angular/common/http';
 import { Dashboard } from './dashboard';
 
 describe('Dashboard', () => {
@@ -8,9 +9,12 @@ describe('Dashboard', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Dashboard]
-    })
-    .compileComponents();
+      imports: [Dashboard], 
+      providers: [
+        ApiService,
+        provideHttpClient()
+      ]
+    }).compileComponents();
 
     fixture = TestBed.createComponent(Dashboard);
     component = fixture.componentInstance;

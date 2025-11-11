@@ -78,6 +78,7 @@ export class ApiService {
     }
   }
 
+  /*
   private async checkAuthToken(response: Promise<any>): Promise<boolean> {
     response.then(
       async (response) => {
@@ -97,5 +98,6 @@ export class ApiService {
       })
     return false;
   }
+    */
 
 }

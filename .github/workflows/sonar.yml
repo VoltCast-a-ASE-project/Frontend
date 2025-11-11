@@ -40,7 +40,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           npx sonar-scanner \
-            -Dsonar.projectKey=Frontend \
+            -Dsonar.projectKey=VoltCast-a-ASE-project_Frontend \
             -Dsonar.sources=voltcast-frontend/src \
             -Dsonar.tests=coltcast-frontend/src \
             -Dsonar.host.url=https://sonarcloud.io \

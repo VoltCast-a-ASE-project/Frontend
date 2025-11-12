@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpMethod } from '../services/http-method.enum';
-import {ApiService} from '../services/api';
+import { HttpMethod } from '../../services/http-method.enum';
+import {ApiService} from '../../services/api';
 
 @Component({
   selector: 'app-dashboard',

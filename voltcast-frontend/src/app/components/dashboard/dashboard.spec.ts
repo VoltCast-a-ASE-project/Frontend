@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ApiService } from '../services/api';
+import { ApiService } from '../../services/api';
 import { provideHttpClient } from '@angular/common/http';
 import { Dashboard } from './dashboard';
 

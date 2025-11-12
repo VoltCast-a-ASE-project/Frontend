@@ -26,7 +26,8 @@ export class ShellyPage implements OnInit{
   protected configureShelly(shelly: ShellyDevice){
     console.log(shelly)
     const dialogRef = this.dialog.open(ShellyAddConfig, {
-        width: '400px',
+        width: '60%',
+        height: '60%',
         data: shelly
       });
 
@@ -42,7 +43,8 @@ export class ShellyPage implements OnInit{
 
   protected addShelly(){
     const dialogRef = this.dialog.open(ShellyAddConfig, {
-      width: '400px'
+      width: '60%',
+      height: '60%',
     });
 
     dialogRef.afterClosed().subscribe((result: ShellyDevice | undefined) => {

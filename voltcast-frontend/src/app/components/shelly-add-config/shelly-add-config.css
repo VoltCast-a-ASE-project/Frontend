@@ -1,0 +1,17 @@
+/* styles.css oder styles.scss */
+.mat-accent {
+  color: #28a745 !important; /* grün für Text oder Icons */
+}
+
+.mat-accent .mat-input-element:focus {
+  border-bottom-color: #28a745 !important;
+}
+
+.mat-raised-button.mat-primary {
+  background-color: #28a745 !important;
+  border-color: #28a745 !important;
+}
+
+.mat-button.mat-primary {
+  color: #28a745 !important;
+}

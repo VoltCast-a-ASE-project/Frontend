@@ -1,20 +1,22 @@
-<h2 mat-dialog-title>Add a new Shelly</h2>
+<h2 mat-dialog-title>{{ data ? 'Configure Shelly' : 'Add new Shelly' }}</h2>
 
-    <mat-dialog-content>
-      <form [formGroup]="shellyForm">
-        <mat-form-field appearance="fill" class="full-width">
-          <mat-label>Name</mat-label>
-          <input matInput formControlName="title">
-        </mat-form-field>
+<mat-dialog-content>
+  <form [formGroup]="shellyForm">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="title">
+    </mat-form-field>
 
-        <mat-form-field appearance="fill" class="full-width">
-          <mat-label>KW</mat-label>
-          <input matInput formControlName="kw">
-        </mat-form-field>
-      </form>
-    </mat-dialog-content>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>KW</mat-label>
+      <input matInput formControlName="kw">
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
 
-    <mat-dialog-actions align="end">
-      <button mat-button (click)="onCancel()">Cancel</button>
-      <button mat-raised-button color="primary" (click)="onAdd()" [disabled]="!shellyForm.valid">Add</button>
-    </mat-dialog-actions>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-raised-button color="primary" (click)="onAdd()" [disabled]="!shellyForm.valid">
+    {{ data ? 'Update' : 'Add' }}
+  </button>
+</mat-dialog-actions>

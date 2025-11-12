@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { MatDialogRef, MatDialogModule } from '@angular/material/dialog';
+import { MatDialogRef,MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -25,12 +25,13 @@ export class ShellyAddConfig {
 
   constructor(
     private fb: FormBuilder,
-    private dialogRef: MatDialogRef<ShellyAddConfig>
+    private dialogRef: MatDialogRef<ShellyAddConfig>,
+    @Inject(MAT_DIALOG_DATA) public data?: ShellyDevice 
   ) {
+    console.log(this.data)
     this.shellyForm = this.fb.group({
-      title: ['', Validators.required],
-      kw: ['', Validators.required],
-      isActivated: [false]
+      title: [this.data?.title || '', Validators.required],
+      kw: [this.data?.kw || '', Validators.required],
     });
   }
 

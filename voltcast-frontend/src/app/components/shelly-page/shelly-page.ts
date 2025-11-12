@@ -24,7 +24,20 @@ export class ShellyPage implements OnInit{
   }
   
   protected configureShelly(shelly: ShellyDevice){
+    console.log(shelly)
+    const dialogRef = this.dialog.open(ShellyAddConfig, {
+        width: '400px',
+        data: shelly
+      });
 
+      dialogRef.afterClosed().subscribe((result: ShellyDevice | undefined) => {
+        if (result) {
+          const index = this.shellys?.indexOf(shelly);
+          if (index !== undefined && index > -1 && this.shellys) {
+            this.shellys[index] = result;
+          }
+        }
+      });
   }
 
   protected addShelly(){

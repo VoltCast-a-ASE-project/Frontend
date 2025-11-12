@@ -1,7 +1,7 @@
 .shelly-form {
   display: flex;
-  flex-direction: column; /* sorgt dafür, dass Felder untereinander stehen */
-  gap: 16px; /* optional: Abstand zwischen den Feldern */
+  flex-direction: column;
+  gap: 16px;
 }
 
 .full-width {

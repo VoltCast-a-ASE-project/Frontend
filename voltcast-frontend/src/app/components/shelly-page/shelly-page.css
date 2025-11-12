@@ -31,7 +31,7 @@ h2 {
   max-width: 400px;
 
   border-radius: 20px;
-  background-color: #e8f5e9;
+  background-color: #e8f0f5;
   padding: 1.5rem;
   margin: 1rem auto;
 
@@ -39,7 +39,7 @@ h2 {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
   font-size: 2rem;
-  color: #4caf50;
+  color: #1f4c76;
 }
 
 .add-shelly:hover {

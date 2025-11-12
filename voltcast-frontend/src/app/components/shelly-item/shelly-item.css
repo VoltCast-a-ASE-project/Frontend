@@ -10,7 +10,7 @@
   max-width: 400px;
 
   border-radius: 20px;
-  background: #f8f9fa;
+  background: #e8f0f5;
   padding: 1.5rem;
   margin: 1rem auto;
 
@@ -38,7 +38,7 @@
 }
 
 ::ng-deep .mat-mdc-slide-toggle.mat-accent .mdc-switch__track::after {
-  background-color: #4caf50 !important;
+  background-color: #1f4c76 !important;
   opacity: 1 !important;
 }
 
@@ -47,7 +47,7 @@
 }
 
 ::ng-deep .mat-mdc-slide-toggle.mat-accent.mdc-switch--selected .mdc-switch__track::after {
-  background-color: #4caf50 !important;
+  background-color: #1f4c76 !important;
 }
 
 .secondRow {

@@ -1,0 +1,12 @@
+<div class="shelly-list-container">
+  <h2>Shelly</h2>
+  <div class="shelly-list">
+    <div *ngFor="let shelly of shellys" class="shelly-item" (click)="configureShelly(shelly)">
+      <app-shelly-item [shelly]="shelly"></app-shelly-item>    
+    </div>
+    
+    <div class="shelly-item add-shelly" (click)="addShelly()">
+      <span>+</span>
+    </div>
+  </div>
+</div>

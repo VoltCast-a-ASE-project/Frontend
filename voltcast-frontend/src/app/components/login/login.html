@@ -1,0 +1,22 @@
+<form #loginForm="ngForm" (ngSubmit)="login()">
+  <div class="container">
+    <h1>Welcome to Voltcast</h1>
+    <img src="..app//public/favicon.png" alt="logo" width="400">
+    <div class="form-group">
+      <label for="email">Username:</label>
+      <input id="email" name="id" type="text" [(ngModel)]="user.email" required placeholder="Username"/>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input id="password" name="pw" type = "password" [(ngModel)]="user.password" required placeholder="Password"/>
+    </div>
+    <div class="form-group">
+      <button type="submit" >Login</button>
+    </div>
+    <div class="form-group">
+      <button type="button" (click)="register()">Register</button>
+      <p *ngIf="errorMessage" class="error">{{errorMessage}}</p>
+      <p *ngIf="successMessage" class="success">{{successMessage}}</p>
+    </div>
+  </div>
+</form>

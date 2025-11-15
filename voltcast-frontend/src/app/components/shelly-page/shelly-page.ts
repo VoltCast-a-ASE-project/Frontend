@@ -4,9 +4,11 @@ import { ShellyDevice } from '../../models/shellyDevice.model';
 import { ShellyItem } from "../shelly-item/shelly-item";
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ShellyAddConfig } from '../shelly-add-config/shelly-add-config';
+import {CdkDrag, CdkDragDrop, CdkDropList, moveItemInArray} from '@angular/cdk/drag-drop';
+
 @Component({
   selector: 'app-shelly-page',
-  imports: [ShellyItem, NgFor, MatDialogModule],
+  imports: [ShellyItem, NgFor, MatDialogModule,CdkDropList, CdkDrag],
   templateUrl: './shelly-page.html',
   styleUrl: './shelly-page.css',
 })
@@ -52,5 +54,9 @@ export class ShellyPage implements OnInit{
         this.shellys?.push(result);
       }
     });
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.shellys!, event.previousIndex, event.currentIndex);
   }
 }

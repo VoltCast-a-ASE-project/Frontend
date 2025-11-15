@@ -1,7 +1,7 @@
 <div class="shelly-list-container">
   <h2>Shelly</h2>
-  <div class="shelly-list">
-    <div *ngFor="let shelly of shellys" class="shelly-item" (click)="configureShelly(shelly)">
+  <div cdkDropList cdkDropListOrientation="mixed" class="shelly-list" (cdkDropListDropped)="drop($event)">
+    <div *ngFor="let shelly of shellys" class="shelly-item" cdkDrag (click)="configureShelly(shelly)">
       <app-shelly-item [shelly]="shelly"></app-shelly-item>    
     </div>
     

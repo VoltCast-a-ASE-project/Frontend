@@ -17,9 +17,9 @@ export class ShellyPage implements OnInit{
 
   ngOnInit(): void {
     this.shellys = [
-    { title: 'Shelly1', isActivated: false, kw: '55' },
-    { title: 'Shelly2', isActivated: true, kw: '120' },
-    { title: 'Shelly3', isActivated: false, kw: '80' }
+    { title: 'Shelly1', isActivated: false, kw: '55',IP:"126.0.0.0" },
+    { title: 'Shelly2', isActivated: true, kw: '120',IP:"126.0.0.0"  },
+    { title: 'Shelly3', isActivated: false, kw: '80',IP:"126.0.0.0"  }
     ];
   }
   

@@ -31,7 +31,7 @@ export class ShellyAddConfig {
     console.log(this.data)
     this.shellyForm = this.fb.group({
       title: [this.data?.title || '', Validators.required],
-      kw: [this.data?.kw || '', Validators.required],
+      IP: [this.data?.IP || '', Validators.required],
     });
   }
 
